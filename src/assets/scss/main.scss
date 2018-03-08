@@ -1,0 +1,71 @@
+@import 'variables';
+@import 'functions';
+
+body {
+	background: $body-bg;
+	font-family: $main-font;
+	text-align: center;
+}
+.container {
+	margin: 0 auto;
+	padding:0;
+	width: 100%;
+	max-width: none;
+}
+button {
+	color: #333;
+}
+header h1 {
+	padding: 1em;
+	background: $primary-color;
+	color: set-text-color($primary-color);
+}
+nav {
+	background: $secondary-color;
+	height: 40px;
+	ul {
+		list-style-type: none;
+	}
+	li {
+		display: inline-block;
+	}
+	a {
+		color: #ccc;
+	    padding: 8px 30px;
+	    display: block;
+	    &:hover {
+	    	background: $primary-color;
+	    	color: #fff;
+	    	text-decoration: none;
+	    }
+	}
+}
+section {
+	padding: 20px;
+	h1 {
+		margin-bottom: 30px;
+	}
+}
+button {
+	padding: 10px 15px;
+}
+.section-a {
+	@extend section;
+	background: $light-color;
+	color: set-text-color($light-color);
+	button {
+		@extent button;
+		background: darken($primary-color, 10%);
+		color: set-text-color($primary-color);
+	}
+}
+.section-b {
+	@extend section;
+	background: $dark-color;
+	color: set-text-color($dark-color);
+	button {
+		@extent button;	
+		background: lighten($secondary-color, 10%);
+		color: set-text-color($secondary-color);
+	}
+}
