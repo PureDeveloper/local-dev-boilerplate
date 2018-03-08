@@ -1,4 +1,4 @@
-# How to use
+# How to set up
 
 run this command to install the required node package modules to set up the local dev environment
 
@@ -12,6 +12,6 @@ run this command to start the server, build and watch
 
 run this command to build and compile src files to dist
 
-`npm build`
+`gulp build`
 
 *see gulpfile.js for details on how the server and build are configured
